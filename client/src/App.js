@@ -1,12 +1,24 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
+import Images from './components/Images';
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
-}
+    <div id='root'>
+      <div className='hero is-fullheight is-bold is-info'>
+        <div className='hero-body'>
+          <div className='container'>
+            <div className='header content'>
+              <h2 className='subtitle is-6'>Code Challenge </h2>
+              <h1 className='title is-1'>Infinite Scroll Code Challenge</h1>
+            </div>
 
-export default App
+            <Images />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;

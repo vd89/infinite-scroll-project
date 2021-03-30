@@ -7,16 +7,13 @@ const createApi = require('unsplash-js').createApi;
 const unsplash = createApi({
   accessKey: 'sNfrXWKF_cbmzUWAcUQ-TcPgVt7g1pjJm-I10OnhnxY',
   secretKey: 'BYm6qcmzmLrZigQD_o8JHL354uLUnqwdAhJqKg-YEGA',
+  callbackUrl: 'http://localhost:3000',
 });
 
 const app = express();
 app.get('/api/photos', (req, res) => {
-  // unsplash.photos
-  //   .listPhotos(1, 30)
-  //   .then(toJson)
-  //   .then((json) => res.json(json));
   unsplash.photos
-    .list(1, 30)
+    .list(req.query.start, req.query.count)
     .then(toJson)
     .then((json) => res.json(json));
 });
