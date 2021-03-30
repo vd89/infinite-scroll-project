@@ -1,0 +1,25 @@
+{
+  "name": "infinite-scroll-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vd89/infinite-scroll-project.git",
+  "author": "vd89 <dixitvora@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "concurrently": "^6.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "universal-config": "^0.3.0",
+    "unsplash-js": "^7.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node .",
+    "server": "nodemon .",
+    "client": "npm start -- prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+}
